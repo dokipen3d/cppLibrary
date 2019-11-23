@@ -39,3 +39,5 @@ struct has_type;
 template <typename T,  template<class> typename variantType, typename... Us>
 struct has_type<T, variantType<Us...>> : std::disjunction<std::is_same<T, Us>...> {};
 ```
+
+actually it doesnt work for pair because the parameters aren't variadic, they are explicit. not sure then if it works for other template classes that have a fixed amount of paramters.
