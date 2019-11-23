@@ -30,6 +30,8 @@ It can be used as an input for std conditional or enable_if
 
 
 This can also be done in c++ with this (which also happens to take the std::variant out and replace it with a 'template template parameter'
+
+This should make it work with pair, tuple, or any template type that has multiple arguments (or even one?). 
 ```cpp
 template <typename T, typename Variant>
 struct has_type;
